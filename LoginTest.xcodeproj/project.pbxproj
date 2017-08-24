@@ -15,6 +15,8 @@
 		5FC2EB491F4DD2190065D430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC2EB471F4DD2190065D430 /* LaunchScreen.storyboard */; };
 		5FC2EB511F4DE5550065D430 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2EB501F4DE5550065D430 /* SignUpViewController.swift */; };
 		5FC2EB531F4E6C470065D430 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FC2EB521F4E6C470065D430 /* GoogleService-Info.plist */; };
+		5FE850A01F4EBF1B00BBD262 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE8509F1F4EBF1B00BBD262 /* LoginViewController.swift */; };
+		5FE850A21F4EC18700BBD262 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE850A11F4EC18700BBD262 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		5FC2EB4A1F4DD2190065D430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FC2EB501F4DE5550065D430 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5FC2EB521F4E6C470065D430 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5FE8509F1F4EBF1B00BBD262 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5FE850A11F4EC18700BBD262 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9AF4CA4F520ADCBE7AEDF89A /* Pods-LoginTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginTest/Pods-LoginTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +81,8 @@
 				5FC2EB3E1F4DD2190065D430 /* AppDelegate.swift */,
 				5FC2EB401F4DD2190065D430 /* ViewController.swift */,
 				5FC2EB421F4DD2190065D430 /* Main.storyboard */,
+				5FE850A11F4EC18700BBD262 /* HomeViewController.swift */,
+				5FE8509F1F4EBF1B00BBD262 /* LoginViewController.swift */,
 				5FC2EB521F4E6C470065D430 /* GoogleService-Info.plist */,
 				5FC2EB451F4DD2190065D430 /* Assets.xcassets */,
 				5FC2EB471F4DD2190065D430 /* LaunchScreen.storyboard */,
@@ -228,6 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE850A21F4EC18700BBD262 /* HomeViewController.swift in Sources */,
+				5FE850A01F4EBF1B00BBD262 /* LoginViewController.swift in Sources */,
 				5FC2EB511F4DE5550065D430 /* SignUpViewController.swift in Sources */,
 				5FC2EB411F4DD2190065D430 /* ViewController.swift in Sources */,
 				5FC2EB3F1F4DD2190065D430 /* AppDelegate.swift in Sources */,

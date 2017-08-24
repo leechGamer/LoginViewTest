@@ -13,6 +13,7 @@ import Firebase
 class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     
     @IBAction func createAccountAction(_ sender: Any) {
         if emailTextField.text == "" {
@@ -23,13 +24,13 @@ class ViewController: UIViewController {
             
             present(alertController, animated: true, completion: nil)
             
-        } else {
+        }
+        else {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 
                 if error == nil {
                     print("You have successfully signed up")
-                    //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
-                    
+                  
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
                     self.present(vc!, animated: true, completion: nil)
                     
@@ -44,6 +45,15 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func loginAction(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Signin")
+        self.present(vc!, animated: true, completion: nil)
+        
+    }
+    
+    
+    
     
     
     override func viewDidLoad() {
