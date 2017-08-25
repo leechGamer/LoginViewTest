@@ -6,5 +6,12 @@ target 'LoginTest' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Firebase/Auth' 
+  pod 'Firebase/Database'
+  pod 'KeychainSwift'
+  pod 'Firebase/Storage'
+  # Pods for Facebook
+  pod 'Bolts'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
   # Pods for LoginTest
 end

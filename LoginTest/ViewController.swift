@@ -9,23 +9,21 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseStorage
+
 
 class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var confirmPassword: UITextField!
+    var userStorage : StorageReference!
+    var ref : DatabaseReference!
+    
     
     @IBAction func createAccountAction(_ sender: Any) {
-        if emailTextField.text == "" {
-            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
-            
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            
-            present(alertController, animated: true, completion: nil)
-            
-        }
-        else {
+        guard  emailTextField.text != "", passwordTextField.text != "", confirmPassword.text != "" else {return}
+        
+        if passwordTextField.text == confirmPassword.text {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 
                 if error == nil {
@@ -34,7 +32,9 @@ class ViewController: UIViewController {
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
                     self.present(vc!, animated: true, completion: nil)
                     
-                } else {
+                }
+                
+                else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -44,6 +44,15 @@ class ViewController: UIViewController {
                 }
             }
         }
+        else {
+        
+              let alertController = UIAlertController(title: "Error", message: "Password doesn not match Confirm password!", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+        
     }
     
     @IBAction func loginAction(_ sender: Any) {
@@ -53,12 +62,14 @@ class ViewController: UIViewController {
     }
     
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         
     }
 

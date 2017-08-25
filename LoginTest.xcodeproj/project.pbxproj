@@ -13,7 +13,6 @@
 		5FC2EB441F4DD2190065D430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC2EB421F4DD2190065D430 /* Main.storyboard */; };
 		5FC2EB461F4DD2190065D430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FC2EB451F4DD2190065D430 /* Assets.xcassets */; };
 		5FC2EB491F4DD2190065D430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC2EB471F4DD2190065D430 /* LaunchScreen.storyboard */; };
-		5FC2EB511F4DE5550065D430 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2EB501F4DE5550065D430 /* SignUpViewController.swift */; };
 		5FC2EB531F4E6C470065D430 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FC2EB521F4E6C470065D430 /* GoogleService-Info.plist */; };
 		5FE850A01F4EBF1B00BBD262 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE8509F1F4EBF1B00BBD262 /* LoginViewController.swift */; };
 		5FE850A21F4EC18700BBD262 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE850A11F4EC18700BBD262 /* HomeViewController.swift */; };
@@ -29,7 +28,6 @@
 		5FC2EB451F4DD2190065D430 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FC2EB481F4DD2190065D430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FC2EB4A1F4DD2190065D430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FC2EB501F4DE5550065D430 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5FC2EB521F4E6C470065D430 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5FE8509F1F4EBF1B00BBD262 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5FE850A11F4EC18700BBD262 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 				5FC2EB451F4DD2190065D430 /* Assets.xcassets */,
 				5FC2EB471F4DD2190065D430 /* LaunchScreen.storyboard */,
 				5FC2EB4A1F4DD2190065D430 /* Info.plist */,
-				5FC2EB501F4DE5550065D430 /* SignUpViewController.swift */,
 			);
 			path = LoginTest;
 			sourceTree = "<group>";
@@ -135,6 +132,7 @@
 				TargetAttributes = {
 					5FC2EB3A1F4DD2190065D430 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = NZC4Q7J74G;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -179,14 +177,24 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LoginTest/Pods-LoginTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,7 +244,6 @@
 			files = (
 				5FE850A21F4EC18700BBD262 /* HomeViewController.swift in Sources */,
 				5FE850A01F4EBF1B00BBD262 /* LoginViewController.swift in Sources */,
-				5FC2EB511F4DE5550065D430 /* SignUpViewController.swift in Sources */,
 				5FC2EB411F4DD2190065D430 /* ViewController.swift in Sources */,
 				5FC2EB3F1F4DD2190065D430 /* AppDelegate.swift in Sources */,
 			);
@@ -364,10 +371,14 @@
 			baseConfigurationReference = 9AF4CA4F520ADCBE7AEDF89A /* Pods-LoginTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NZC4Q7J74G;
 				INFOPLIST_FILE = LoginTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.LoginTest;
+				PRODUCT_BUNDLE_IDENTIFIER = tho.LoginTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -377,10 +388,14 @@
 			baseConfigurationReference = 1BA9552EF66FCFFF49F0AF58 /* Pods-LoginTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NZC4Q7J74G;
 				INFOPLIST_FILE = LoginTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.LoginTest;
+				PRODUCT_BUNDLE_IDENTIFIER = tho.LoginTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
